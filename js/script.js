@@ -91,7 +91,45 @@ if ( bis % 4 == 0 || (bis % 100 == 0 && bis % 400) ){
 }
 */
 
+// Imprimir un rectangulo dando alto y ancho
 
+/*
+var al = prompt('Altura');
+var an = prompt('Ancho');
+
+var cont = '';
+
+for (var i = 0; i < al; i++){
+    for(var j = 0; j < an; j++){
+        cont += '*'
+    }
+    cont += '\n';
+}
+console.log(cont);
+*/
+
+
+
+// Potencias
+/*
+var num = Number(prompt('ingrese el numero a multiplicar'));
+var mul = Number(prompt('cuantas veces'));
+for (var i = 0; i < mul; i++){  
+    num += num; 
+}
+*/
+
+// Multiplicacion
+
+/*
+var num = Number(prompt('ingrese el numero a multiplicar'));
+var mul = Number(prompt('cuantas veces'));
+var res = 0;
+for (var i = 0; i < mul; i++){
+    res += num; 
+}
+console.log(res)
+*/
 
 
 
