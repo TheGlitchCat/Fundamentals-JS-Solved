@@ -131,5 +131,64 @@ for (var i = 0; i < mul; i++){
 console.log(res)
 */
 
+// Escriba la función mcd(a, b) que entrege el máximo común divisor de los enteros a y b
+/*
+function mcd(a,b){
+    if(a < b){
+        for(var i = 0; i < b; i++){
+            if(a % i == 0 && b % i == 0){
+                console.log(i);
+            }
+        }
+    } else {
+        for(var i = 0; i < a; i++){
+            if(a % i == 0 && b % i == 0){
+                console.log(i);
+            }
+        }
+    }
+}
+
+var a = Number(prompt('Ingrese a'));
+var b = Number(prompt('Ingrese b'));
+mcd(a,b);*/
 
 
+// Palabra palindroma
+/*
+var inverso = '';
+var normal = '12321';
+for(var i = normal.length - 1; i >= 0; i--){
+    inverso += normal[i]
+}
+console.log(normal)
+console.log(inverso)
+if(inverso == normal){
+    console.log("Es palindromo")
+}else{
+    console.log("no es palindromo")
+}
+*/
+
+
+// Adivinar numero de la maquina
+var think = parseInt(Math.random() * (100 - 0))
+var lives = 10;
+while( lives > 0 ){
+    var request = Number(prompt('Insert number'));
+
+    if(request > think){
+        console.log("less " + request);
+    } else if(request < think){
+        console.log('More ' + request);
+    } else {
+        console.log('Find It !!!! :D ' + request);
+        break;
+    }
+
+    lives--;
+}
+
+if(lives == 0){
+    console.log('Game Over, the numer is: ' + think);
+}
