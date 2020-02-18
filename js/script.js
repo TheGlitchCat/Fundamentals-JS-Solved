@@ -172,6 +172,7 @@ if(inverso == normal){
 
 
 // Adivinar numero de la maquina
+/*
 var think = parseInt(Math.random() * (100 - 0))
 var lives = 10;
 while( lives > 0 ){
@@ -191,4 +192,82 @@ while( lives > 0 ){
 
 if(lives == 0){
     console.log('Game Over, the numer is: ' + think);
+}
+*/
+
+
+// Juego dados 
+/*
+function lanzar(){
+    return parseInt(Math.random() * (13 - 2) + 2);
+}
+
+while(opt != 0 ){
+    var opt = Number(prompt("1: Jugar \n 0:Salir"));
+    
+    switch(opt){
+       case 0:
+            break;
+       case 1:
+            var lanzamiento = lanzar();
+            console.log(lanzamiento);
+            for(var i = 1; i <= 6; i++){
+                for(var j = 1; j <= 6; j++){
+                    if(i+j == lanzamiento){
+                        console.log(`i: ${i} j: ${j} i+j: ${i+j} lanzar: ${lanzamiento}`);
+                    }
+                }
+            }
+            break;
+       default:
+            alert("Escoja una opcion");
+            
+   }
+    
+}
+*/
+// Juego dados version HARD
+// Cantidad de lados
+var lados = 6;
+
+// Funcion que retorna un numero random  
+function lanzar(){                   
+    return parseInt(Math.random() * (((lados*2) + 1 )- 2) + 2);
+}
+
+/* 
+    Funcion que calcula, imprime y valida las posibilidades 
+    del resultado de lanzar 2 dados
+ */
+ function calcular(lanzamiento){
+    for(var i = 1; i <= lados; i++){
+        for(var j = 1; j <= lados; j++){
+            if(i+j == lanzamiento){
+                console.log(`i: ${i} j: ${j} i+j: ${i+j} lanzar: ${lanzamiento}`);
+            }
+        }
+    }
+}
+
+// Mientras que la opcion de mi menu sea diferente a 0 se ejecuta 
+while(opt != 0 ){
+    
+    // Menu
+    var opt = Number(prompt("1: Jugar \n 0:Salir"));
+    
+    // funcionamiento del juego
+    switch(opt){
+        case 0:
+            // Salir
+            break;
+        case 1:
+            // Jugar
+            var lanzamiento = lanzar(); // guardando el valor que retorna la funcion
+            // funcion que calcula la nomina
+            calcular(lanzamiento);
+            break;
+        default:
+            alert("Escoja una opcion");
+    }
+    
 }
