@@ -228,9 +228,11 @@ while(opt != 0 ){
 */
 // Juego dados version HARD
 // Cantidad de lados
-var lados = 6;
+// var lados = 6;
 
 // Funcion que retorna un numero random  
+
+/*
 function lanzar(){                   
     return parseInt(Math.random() * (((lados*2) + 1 )- 2) + 2);
 }
@@ -239,6 +241,7 @@ function lanzar(){
     Funcion que calcula, imprime y valida las posibilidades 
     del resultado de lanzar 2 dados
  */
+ /*
  function calcular(lanzamiento){
     for(var i = 1; i <= lados; i++){
         for(var j = 1; j <= lados; j++){
@@ -248,8 +251,10 @@ function lanzar(){
         }
     }
 }
+*/
 
 // Mientras que la opcion de mi menu sea diferente a 0 se ejecuta 
+/*
 while(opt != 0 ){
     
     // Menu
@@ -270,4 +275,47 @@ while(opt != 0 ){
             alert("Escoja una opcion");
     }
     
+}*/
+
+
+// FOR EACH
+/*
+var user = {
+    "name": "Laura",
+    "surname": "Sanchez",
+    "age": 25 
 }
+
+var user1 = {
+    "name": "William",
+    "surname": "Herrera",
+    "age": 27
+}
+
+var user2 = {
+    "name": "Omar",
+    "surname": "Romero",
+    "age": 23 
+}
+
+var user3 = {
+    "name": "Andrea",
+    "surname": "Sanchez",
+    "age": 29
+}
+
+var users = [user, user1, user2, user3]
+
+var cont = '';
+users.forEach(user => 
+    cont += '<div style="font-size: 25px">' 
+            + '<h1>' + user.name + '</h1>'
+            + '<h2>' + user.surname + '</h2>'
+            + '<h3>' + user.age + '</h3>'
+            + '</div>'
+            );
+document.getElementById('user').innerHTML = cont;
+            
+*/
+
+
